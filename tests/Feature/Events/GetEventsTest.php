@@ -12,11 +12,11 @@ class GetEventsTest extends TestCase
     
     use RefreshDatabase; 
 
-    public function test_can_retrive_all_events()
+    public function tests()
     {
         $events= Event::factory(5)->create(); 
 
-        $this->assertCount(4, $events); 
+        $this->assertCount(5, $events); 
 
         $events= Event::all();
 
